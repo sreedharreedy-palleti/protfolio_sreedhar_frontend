@@ -1,0 +1,259 @@
+.experience-section {
+  position: relative;
+}
+
+/* ========================================================
+   CENTERED EXPERIENCE GRID
+   ======================================================== */
+.experience-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Centered Card Box (Decreased width) */
+.experience-grid-card {
+  width: 100%;
+  max-width: 360px;
+  padding: 2rem 1.75rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  gap: 1.15rem;
+  border-radius: var(--radius-lg, 20px);
+  background: rgba(15, 23, 42, 0.7);
+  background: linear-gradient(145deg, rgba(22, 33, 56, 0.8) 0%, rgba(13, 20, 36, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.55);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.experience-grid-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.65);
+}
+
+.experience-card-glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.current-role .experience-card-glow {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+}
+
+.experience-grid-card.current-role {
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+/* Social Links Row (Down Center) */
+.exp-bottom-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  width: 100%;
+}
+
+.exp-icon-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary, #94a3b8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.exp-icon-link:hover {
+  color: var(--accent-cyan, #06b6d4);
+  border-color: rgba(6, 182, 212, 0.4);
+  background: rgba(6, 182, 212, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ========================================================
+   CENTERED LOGO WITH INCREASED HEIGHT & WIDTH
+   ======================================================== */
+.exp-logo-center-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.25rem auto 0.75rem auto;
+}
+
+.exp-company-logo-img {
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.experience-grid-card:hover .exp-company-logo-img {
+  transform: scale(1.05);
+}
+
+.exp-preset-logo {
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease;
+}
+
+.experience-grid-card:hover .exp-preset-logo {
+  transform: scale(1.05);
+}
+
+.cloud-logo {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  color: var(--accent-indigo, #818cf8);
+}
+
+.atom-logo {
+  background: linear-gradient(135deg, #4c1d95 0%, #0f172a 100%);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  color: var(--accent-violet, #a78bfa);
+}
+
+.default-logo {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary, #94a3b8);
+}
+
+/* Centered Title Block */
+.exp-grid-title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.45rem;
+  width: 100%;
+}
+
+.exp-grid-role {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+}
+
+.exp-grid-company-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.exp-grid-company {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent-cyan, #06b6d4);
+}
+
+.current-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full, 9999px);
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-emerald, #10b981);
+}
+
+.badge-pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-emerald, #10b981);
+  box-shadow: 0 0 6px var(--accent-emerald, #10b981);
+}
+
+/* Duration */
+.exp-grid-duration {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full, 9999px);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  color: var(--text-secondary, #94a3b8);
+  margin: 0 auto;
+}
+
+/* Division / Department Tag */
+.exp-grid-division {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  color: var(--text-muted, #64748b);
+  padding: 0.3rem 0.75rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm, 6px);
+  display: inline-block;
+  margin: 0 auto;
+}
+
+
+
+.empty-exp-card {
+  padding: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-muted, #64748b);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 540px) {
+  .experience-grid-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .exp-company-logo-img,
+  .exp-preset-logo {
+    width: 64px;
+    height: 64px;
+  }
+}
