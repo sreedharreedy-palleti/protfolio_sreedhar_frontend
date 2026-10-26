@@ -5,6 +5,7 @@ import {
   Heart,
   Mail,
   Activity,
+  Shield,
 } from 'lucide-react';
 import './Footer.css';
 
@@ -112,6 +113,17 @@ export default function Footer({
           {/* Quick Action */}
           <div className="footer-admin-col">
             <h4 className="footer-links-header">Action</h4>
+            {onNavigateAdmin && (
+              <button
+                type="button"
+                className="footer-admin-btn"
+                onClick={onNavigateAdmin}
+                title="Open Admin Portal"
+              >
+                <Shield size={16} />
+                <span>Admin Portal</span>
+              </button>
+            )}
             <button
               type="button"
               className="footer-scroll-top-btn"
