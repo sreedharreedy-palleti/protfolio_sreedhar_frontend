@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Activity, Menu, X, Terminal, ExternalLink, Shield } from 'lucide-react';
+import { Activity, Menu, X, Terminal, ExternalLink } from 'lucide-react';
 import './Navbar.css';
 
 export default function Navbar({
@@ -82,20 +82,8 @@ export default function Navbar({
           ))}
         </nav>
 
-        {/* Right Actions: API Status & Admin */}
+        {/* Right Actions: Mobile Toggle */}
         <div className="navbar-actions">
-          {onNavigateAdmin && (
-            <button
-              type="button"
-              className="btn-admin-portal"
-              onClick={onNavigateAdmin}
-              title="Open Admin Portal"
-            >
-              <Shield size={14} />
-              <span>Admin</span>
-            </button>
-          )}
-
           {/* Mobile Menu Toggle */}
           <button
             type="button"
@@ -123,23 +111,6 @@ export default function Navbar({
                 {activeSection === link.id && <span className="mobile-active-indicator" />}
               </a>
             ))}
-          </div>
-
-          <div className="mobile-drawer-footer">
-            {onNavigateAdmin && (
-              <button
-                type="button"
-                className="btn-admin-portal"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onNavigateAdmin();
-                }}
-                style={{ width: '100%', justifyContent: 'center' }}
-              >
-                <Shield size={15} />
-                <span>Admin Portal</span>
-              </button>
-            )}
           </div>
         </div>
       )}
