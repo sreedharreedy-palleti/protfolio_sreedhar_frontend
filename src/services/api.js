@@ -10,25 +10,26 @@ export const FALLBACK_ABOUT = {
   sectionSubtitle: 'My introduction',
   cardBadge: 'ENGINEERING PHILOSOPHY',
   headline: 'Bridging engineering precision with human-centric interfaces',
-  text: 'Senior Software Engineer with 6+ years of experience building scalable cloud-native applications, data platforms, and analytics solutions. I specialize in Java, Spring Boot, Python, React, Azure, Kubernetes, and Apache Superset, with a strong interest in open-source technologies, AI-powered products, and data-driven innovation.',
+  text: 'Motivated Computer Science & Engineering (Data Science) graduate with hands-on experience in full-stack web development. Proficient in Python, JavaScript, React, and Node.js, with strong expertise in building responsive web applications and high-performance RESTful APIs. Eager to apply technical knowledge and data-driven problem-solving to contribute to innovative software solutions.',
   stats: [
-    { value: '06+', label: 'Years experience' },
-    { value: '05', label: 'Companies Work' },
-    { value: '15+', label: 'Technical Skills' },
+    { value: '2027', label: 'Graduation Year' },
+    { value: '7.00', label: 'B.Tech CGPA' },
+    { value: '10+', label: 'Technical Skills' },
   ],
   cv: {
-    url: '',
+    url: '/resume.pdf',
     data: '',
-    fileName: '',
-    fileSize: '',
+    fileName: 'Venkata_Sreedhar_Reddy_Resume.pdf',
+    fileSize: '4.6 KB',
     uploadedAt: '',
   },
   keyPoints: [
-    'Specialized in CSE & Data Science fundamentals',
-    'Extensive real-world experience across frontend and backend services',
-    'Passionate about automated testing, CI/CD, and maintainable codebases',
+    'Specialized in CSE & Data Science fundamentals (CGPA: 7.00)',
+    'Hands-on full-stack development with React, Node.js, Express.js, and FastAPI',
+    'Experienced with AI/NLP Transformers, Whisper speech-to-text, and PyTorch',
+    'End-to-end deployments across Netlify, Render, Docker, and Kubernetes',
   ],
-  location: 'Andhra Pradesh, India',
+  location: 'Kadapa, Andhra Pradesh',
   email: 'palletisreedharreddy82@gmail.com',
   availability: 'Open for Roles',
 };
@@ -36,26 +37,30 @@ export const FALLBACK_ABOUT = {
 // Fallback seed data in case backend server is temporarily uncontactable
 export const FALLBACK_CONTENT = {
   hero: {
-    badge: 'Full-Stack Developer',
+    badge: 'Full-Stack Developer & Data Science Graduate',
     heading: "HELLO ! I'm Venkata Sreedhar Reddy Palleti",
-    subheading: '',
+    subheading: 'Specializing in Python, JavaScript, React, Node.js, and FastAPI with strong expertise in cloud-native deployments and RESTful APIs.',
     avatarUrl: '',
   },
   about: { ...FALLBACK_ABOUT },
   skills: [
+    'Python',
+    'JavaScript',
     'React.js',
     'Node.js',
     'Express.js',
+    'FastAPI',
     'MongoDB',
-    'Python',
-    'Tailwind CSS',
+    'SQL',
     'Docker',
-    'Kubernetes'
+    'Kubernetes',
+    'Git',
+    'Power BI'
   ],
   contactInfo: {
     email: 'palletisreedharreddy82@gmail.com',
-    phone: '+91-8885439267',
-    location: 'Andhra Pradesh, India',
+    phone: '+91 8885439267',
+    location: 'Kadapa, Andhra Pradesh',
     photoUrl: '',
     linkedinUrl: 'https://linkedin.com',
     instagramUrl: 'https://instagram.com',
@@ -65,19 +70,9 @@ export const FALLBACK_CONTENT = {
   },
   education: [
     {
-      degree: 'B. Tech in CSE(Data Science)',
+      degree: 'B.Tech – Computer Science and Engineering (Data Science), CGPA: 7.00',
       institution: 'Rajeev Gandhi Memorial College of Engineering and Technology',
-      duration: '2023 - 2027'
-    },
-    {
-      degree: 'Higher Secondary',
-      institution: 'Narayana Junior College, Nellore',
-      duration: '2021 - 2023'
-    },
-    {
-      degree: 'Secondary (SSC)',
-      institution: 'Usha Kiran High School, Kadapa',
-      duration: '2021'
+      duration: '2023 – 2027'
     }
   ]
 };
@@ -85,32 +80,22 @@ export const FALLBACK_CONTENT = {
 export const FALLBACK_PROJECTS = [
   {
     _id: 'seed-1',
-    title: 'AI Resume Analyzer & Proctoring Engine',
-    content: 'ATS resume scoring paired with an automated proctoring microservice.',
-    description: 'ATS resume scoring paired with an automated proctoring microservice.',
+    title: 'RS Infra – Construction based website',
+    content: '• Designed and developed a responsive full-stack construction web application using React and FastAPI, incorporating custom interactive UI components and dynamic sector pages.\n• Engineered secure backend RESTful APIs and connected database pipelines to manage real-time client inquiries, service listings, and project portfolio data.\n• Optimized application load times and cross-browser responsiveness, managing end-to-end deployment.',
+    description: '• Designed and developed a responsive full-stack construction web application using React and FastAPI, incorporating custom interactive UI components and dynamic sector pages.\n• Engineered secure backend RESTful APIs and connected database pipelines to manage real-time client inquiries, service listings, and project portfolio data.\n• Optimized application load times and cross-browser responsiveness, managing end-to-end deployment.',
     liveDemo: 'https://example.com',
     live: 'https://example.com',
-    tech: ['React', 'Node.js', 'FastAPI', 'Tailwind CSS'],
+    tech: ['React', 'Node.js', 'Express.js', 'FastAPI', 'Render', 'Netlify'],
     github: 'https://github.com'
   },
   {
     _id: 'seed-2',
-    title: 'Voice Emotion & Sentiment Tracker',
-    content: 'Real-time emotion detection web app using speech processing models.',
-    description: 'Real-time emotion detection web app using speech processing models.',
+    title: 'AI-Powered Automated Interview & Candidate Assessment Platform',
+    content: '• Built an end-to-end AI interviewing platform that streams video/audio responses and conducts dynamic technical evaluations without manual intervention.\n• Fine-tuned Transformer models (BERT/RoBERTa) and integrated Whisper speech-to-text for automated semantic scoring, sentiment analysis, and transcriptions.\n• Engineered a high-performance FastAPI backend to automate scheduling, real-time response processing, and feedback report generation.',
+    description: '• Built an end-to-end AI interviewing platform that streams video/audio responses and conducts dynamic technical evaluations without manual intervention.\n• Fine-tuned Transformer models (BERT/RoBERTa) and integrated Whisper speech-to-text for automated semantic scoring, sentiment analysis, and transcriptions.\n• Engineered a high-performance FastAPI backend to automate scheduling, real-time response processing, and feedback report generation.',
     liveDemo: 'https://example.com',
     live: 'https://example.com',
-    tech: ['React', 'Express', 'Python', 'Web Audio API'],
-    github: 'https://github.com'
-  },
-  {
-    _id: 'seed-3',
-    title: 'Paytm Recharge & Utility Portal',
-    content: 'Full frontend checkout flow simulating mobile and utility bill recharges.',
-    description: 'Full frontend checkout flow simulating mobile and utility bill recharges.',
-    liveDemo: 'https://example.com',
-    live: 'https://example.com',
-    tech: ['React', 'Vite', 'Tailwind CSS'],
+    tech: ['Python', 'PyTorch', 'NLP', 'Transformers (Whisper, BERT)', 'FastAPI', 'MongoDB'],
     github: 'https://github.com'
   }
 ];
@@ -118,54 +103,20 @@ export const FALLBACK_PROJECTS = [
 export const FALLBACK_EXPERIENCES = [
   {
     _id: 'seed-exp-1',
-    company: 'GE Vernova',
-    role: 'Sr Software Engineer',
-    duration: 'Oct 2025 – Present',
-    isCurrent: true,
-    bannerBg: '#06262a',
-    logoType: 'ge',
-    logoText: 'GE VERNOVA',
+    company: 'Brillon AI Pvt. Ltd.',
+    role: 'Full-Stack Web Development Intern',
+    duration: 'April 2026 – July 2026',
+    isCurrent: false,
+    bannerBg: '#075153',
+    logoType: 'brillon',
+    logoText: 'Brillon AI',
     logoUrl: '',
     socials: {
       instagram: 'https://instagram.com',
       linkedin: 'https://linkedin.com',
-      website: 'https://gevernova.com'
+      website: 'https://brillon.ai'
     },
     order: 1
-  },
-  {
-    _id: 'seed-exp-2',
-    company: 'Enterprise Cloud',
-    role: 'Full-Stack Software Engineer',
-    duration: '2023 – 2025',
-    isCurrent: false,
-    bannerBg: '#090e1c',
-    logoType: 'cloud',
-    logoText: 'CLOUD TECH',
-    logoUrl: '',
-    socials: {
-      instagram: 'https://instagram.com',
-      linkedin: 'https://linkedin.com',
-      website: 'https://aws.amazon.com'
-    },
-    order: 2
-  },
-  {
-    _id: 'seed-exp-3',
-    company: 'Digital Innovation Labs',
-    role: 'Frontend & Systems Developer',
-    duration: '2022 – 2023',
-    isCurrent: false,
-    bannerBg: '#090e1c',
-    logoType: 'atom',
-    logoText: 'DIGITAL LABS',
-    logoUrl: '',
-    socials: {
-      instagram: 'https://instagram.com',
-      linkedin: 'https://linkedin.com',
-      website: 'https://github.com'
-    },
-    order: 3
   }
 ];
 

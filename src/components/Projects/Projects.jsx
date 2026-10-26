@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   FolderGit2,
   ExternalLink,
@@ -12,24 +12,7 @@ import { parseProjectPoints } from '../../utils/projectHelpers';
 import './Projects.css';
 
 export default function Projects({ projectsList = [] }) {
-  const [filterTech, setFilterTech] = useState('ALL');
-
   const projects = Array.isArray(projectsList) ? projectsList : [];
-
-  // Extract all distinct tech tags for filter pills
-  const allTechs = Array.from(
-    new Set(
-      projects.flatMap((p) => (Array.isArray(p.tech) ? p.tech : []))
-    )
-  ).slice(0, 8);
-
-  const filteredProjects = projects.filter((project) => {
-    if (filterTech === 'ALL') return true;
-    if (!Array.isArray(project.tech)) return false;
-    return project.tech.some(
-      (t) => t.toLowerCase() === filterTech.toLowerCase()
-    );
-  });
 
   return (
     <section id="projects" className="section projects-section">
@@ -43,38 +26,15 @@ export default function Projects({ projectsList = [] }) {
           <h2 className="section-title">My Projects</h2>
         </div>
 
-        {/* Tech Quick Filter */}
-        {allTechs.length > 0 && (
-          <div className="projects-filter-bar">
-            <button
-              type="button"
-              className={`filter-chip ${filterTech === 'ALL' ? 'active' : ''}`}
-              onClick={() => setFilterTech('ALL')}
-            >
-              All Projects ({projects.length})
-            </button>
-            {allTechs.map((tech) => (
-              <button
-                key={tech}
-                type="button"
-                className={`filter-chip ${filterTech === tech ? 'active' : ''}`}
-                onClick={() => setFilterTech(tech)}
-              >
-                {tech}
-              </button>
-            ))}
-          </div>
-        )}
-
-        {/* Projects Timeline (Experience UI layout adapted for Projects) */}
-        {filteredProjects.length === 0 ? (
+        {/* Projects Timeline */}
+        {projects.length === 0 ? (
           <div className="glass-card empty-proj-card">
             <Layers size={36} className="empty-icon" />
-            <p>No projects match the selected technology filter.</p>
+            <p>No projects available to display.</p>
           </div>
         ) : (
           <div className="projects-timeline">
-            {filteredProjects.map((project, idx) => {
+            {projects.map((project, idx) => {
               const points = parseProjectPoints(project.content || project.description);
               const liveUrl = project.liveDemo || project.live;
               const githubUrl = project.github;
@@ -91,7 +51,7 @@ export default function Projects({ projectsList = [] }) {
                     <div className="timeline-dot">
                       {isLive && <span className="timeline-dot-ping" />}
                     </div>
-                    {idx < filteredProjects.length - 1 && <div className="timeline-line" />}
+                    {idx < projects.length - 1 && <div className="timeline-line" />}
                   </div>
 
                   {/* Horizontal Timeline Card */}
