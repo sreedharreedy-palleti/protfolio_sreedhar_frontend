@@ -19,7 +19,6 @@ const DEFAULT_EDUCATION = [
     duration: '2021',
   },
 ];
-
 export default function Education({ educationList = [] }) {
   const education = Array.isArray(educationList) && educationList.length >= 2
     ? educationList
@@ -63,26 +62,6 @@ export default function Education({ educationList = [] }) {
           ))}
         </div>
 
-        {/* Certifications from Resume */}
-        <div className="certifications-container">
-          <div className="certifications-header">
-            <Award size={15} />
-            <span>Honors &amp; Certifications</span>
-          </div>
-          <div className="certifications-grid">
-            {CERTIFICATIONS.map((cert, cIdx) => (
-              <div key={cIdx} className="glass-card cert-card">
-                <div className="cert-badge-icon">
-                  <Award size={20} />
-                </div>
-                <div className="cert-info">
-                  <h4 className="cert-title">{cert.title}</h4>
-                  <span className="cert-issuer">{cert.issuer} • {cert.year}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
