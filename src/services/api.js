@@ -71,8 +71,18 @@ export const FALLBACK_CONTENT = {
   education: [
     {
       degree: 'B.Tech – Computer Science and Engineering (Data Science), CGPA: 7.00',
-      institution: 'Rajeev Gandhi Memorial College of Engineering and Technology',
+      institution: 'Rajeev Gandhi Memorial College of Engineering and Technology, Nandyal',
       duration: '2023 – 2027'
+    },
+    {
+      degree: 'Higher Secondary (Intermediate, MPC)',
+      institution: 'Narayana Junior College, Nellore',
+      duration: '2021 – 2023'
+    },
+    {
+      degree: 'Secondary School Certificate (SSC)',
+      institution: 'Usha Kiran High School, Kadapa',
+      duration: '2021'
     }
   ]
 };

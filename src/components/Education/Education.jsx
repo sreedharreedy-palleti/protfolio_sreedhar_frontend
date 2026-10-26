@@ -1,9 +1,42 @@
 import React from 'react';
-import { GraduationCap, Calendar, School, Award, CheckCircle } from 'lucide-react';
+import { GraduationCap, Calendar, School, Award } from 'lucide-react';
 import './Education.css';
 
+const DEFAULT_EDUCATION = [
+  {
+    degree: 'B.Tech – Computer Science and Engineering (Data Science), CGPA: 7.00',
+    institution: 'Rajeev Gandhi Memorial College of Engineering and Technology, Nandyal',
+    duration: '2023 – 2027',
+  },
+  {
+    degree: 'Higher Secondary (Intermediate, MPC)',
+    institution: 'Narayana Junior College, Nellore',
+    duration: '2021 – 2023',
+  },
+  {
+    degree: 'Secondary School Certificate (SSC)',
+    institution: 'Usha Kiran High School, Kadapa',
+    duration: '2021',
+  },
+];
+
+const CERTIFICATIONS = [
+  {
+    title: 'Soft Skills Certification',
+    issuer: 'NPTEL',
+    year: '2025',
+  },
+  {
+    title: 'Full-Stack Web Development Workshop',
+    issuer: 'Brillon AI Pvt. Ltd.',
+    year: '2026',
+  },
+];
+
 export default function Education({ educationList = [] }) {
-  const education = Array.isArray(educationList) ? educationList : [];
+  const education = Array.isArray(educationList) && educationList.length >= 2
+    ? educationList
+    : DEFAULT_EDUCATION;
 
   return (
     <section id="education" className="section education-section">
@@ -17,6 +50,7 @@ export default function Education({ educationList = [] }) {
           <h2 className="section-title">My Education</h2>
         </div>
 
+        {/* 3-Card Education Grid */}
         <div className="education-grid">
           {education.map((item, idx) => (
             <div key={idx} className="glass-card education-card">
@@ -40,6 +74,27 @@ export default function Education({ educationList = [] }) {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Certifications from Resume */}
+        <div className="certifications-container">
+          <div className="certifications-header">
+            <Award size={15} />
+            <span>Honors &amp; Certifications</span>
+          </div>
+          <div className="certifications-grid">
+            {CERTIFICATIONS.map((cert, cIdx) => (
+              <div key={cIdx} className="glass-card cert-card">
+                <div className="cert-badge-icon">
+                  <Award size={20} />
+                </div>
+                <div className="cert-info">
+                  <h4 className="cert-title">{cert.title}</h4>
+                  <span className="cert-issuer">{cert.issuer} • {cert.year}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
